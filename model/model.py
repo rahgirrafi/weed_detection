@@ -2,6 +2,8 @@ import torch
 import os 
 import cv2
 
+
+ 
 def save_model():
     torch.save(model.model, "weed_detector" )
 
@@ -13,6 +15,7 @@ def load_model():
 image_dir = "data/images/"
 output_dir = "data/output/"
 os.makedirs(output_dir, exist_ok=True)
+model = torch.hub.load('ultralytics/yolov5', 'custom', path="custom3.pt")
 
 def detect_image(image_path):
     for filename in os.listdir(image_dir):
@@ -40,6 +43,4 @@ def detect_image(image_path):
             cv2.imwrite(output_path, result_image)
 
 
-model = torch.hub.load('ultralytics/yolov5', 'custom', path="custom3.pt")
-
-
+	
