@@ -1,0 +1,42 @@
+#!/usr/bin/env python3
+
+import cv2 as cv
+import numpy as np
+import rospy
+import torch
+from sensor_msgs.msg import Image
+from cv_bridge import CvBridge
+from std_msgs.msg import String
+
+
+
+def object_detector():
+    model = torch.hub.load('ultralytics/yolov5', 'yolov5s', pretrained=True)
+    bridge = CvBridge()
+    cap = cv.VideoCapture(1)
+
+    rospy.init_node('image_publisher', anonymous=True)
+    bbox_pub = rospy.Publisher('weed_detection', Image, queue_size=10)
+
+    rate = rospy.Rate(30)
+
+    while not rospy.is_shutdown():
+        # Read a frame from the camera
+        ret, frame = cap.read()
+        if ret:
+            results = model(frame)
+            ros_img = bridge.cv2_to_imgmsg(results.render()[0], encoding="passthrough")
+            # Publish the image
+            bbox_pub.publish(ros_img)
+            rate.sleep()
+
+    # Release the video capture object when the node is terminated
+    cap.release()
+
+if __name__ == '__main__':
+    try:
+        object_detector()
+    except rospy.ROSInterruptException:
+        pass
+
+    #ok
