@@ -20,8 +20,7 @@ def object_detector():
             ros_img = bridge.cv2_to_imgmsg(frame, encoding="passthrough")
             # Publish the image
             bbox_pub.publish(ros_img)
-            print('Published')
-            rate.sleep()
+  rpi            rate.sleep()
 
     # Release the video capture object when the node is terminated
     cap.release()
