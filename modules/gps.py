@@ -4,10 +4,12 @@ port = '/dev/ttyAMA0'
 ser = serial.Serial(port, baudrate = 9600, timeout = 0.5)
 
 while True:
-    newdata = ser.readline().decode('utf-8')
-   # print(newdata[0:6])
+    try:
+        newdata = ser.readline().decode('utf-8')
+    except:
+        newdata = ser.readline().decode('utf-8')
     if newdata[0:6] == '$GPRMC':
-       # print('Hello')
+        # print('Hello')
         msg = pynmea2.parse(newdata)
         lat = msg.latitude
         lng = msg.longitude

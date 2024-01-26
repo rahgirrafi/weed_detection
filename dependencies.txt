@@ -1,0 +1,11 @@
+python modules:
+	opencv
+	torch
+	RPi
+	pynmea2
+	pandas 
+	numpy
+	matplotlib
+	rospy
+	
+	
