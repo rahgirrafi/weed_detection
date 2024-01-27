@@ -33,8 +33,6 @@ def object_detector():
             # Publish the image
             bbox_pub.publish(ros_img)
             rate.sleep()
-
-    # Release the video capture object when the node is terminated
     cap.release()
 
 if __name__ == '__main__':
@@ -42,5 +40,3 @@ if __name__ == '__main__':
         object_detector()
     except rospy.ROSInterruptException:
         pass
-
-    #ok
