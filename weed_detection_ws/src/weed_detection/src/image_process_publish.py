@@ -31,7 +31,6 @@ def object_detector():
             bbox_pub.publish(ros_img)
             rate.sleep()
 
-    # Release the video capture object when the node is terminated
     cap.release()
 
 if __name__ == '__main__':
