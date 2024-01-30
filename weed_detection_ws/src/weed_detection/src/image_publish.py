@@ -27,10 +27,11 @@ def object_detector():
         ret, frame = cap.read()
 
         if ret:
-            ros_img = bridge.cv2_to_imgmsg(frame, encoding="passthrough")
             #put gps data on image
             ros_img = cv.putText(frame, gps, (0,25), cv.FONT_HERSHEY_COMPLEX, 0.5 , (0,255,255), 1, cv.LINE_AA)
+            ros_img = bridge.cv2_to_imgmsg(frame, encoding="passthrough")
             # Publish the image
+            
             bbox_pub.publish(ros_img)
             rate.sleep()
     cap.release()
