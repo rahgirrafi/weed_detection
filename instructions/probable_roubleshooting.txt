@@ -1,0 +1,8 @@
+1. Sometimes if you see a red colored warning message after starting roscore (ref: operation.txt) sayng "ROST_MASTER_URI [http://192.168.x.xxx] host is not set to this machine],
+   then most probably your Raspberry pi's IP address has changed. Update it (Ref: Setting_up.txt)
+
+2. If you ever run into a "permission denied" or "No executable found" "something.py is not an executable" type of issue after using rosrun command, simple type in the following command:
+	$ chmod a+x -R weed_detection
+   This should solve all your permission related problem
+   
+3. If you ever face any issue after running the image_publish.py or image_process_publish.py issue saying: camera is out of index or something like this, then simply change the camera index to 0,1,2    until the problem goes away. Though this is very unlikely to happen if in your raspberry pi, but it can sometime happen if you have multiple camera on your devices. If you are not sure what to do, then simply contact me.

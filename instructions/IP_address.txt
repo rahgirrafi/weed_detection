@@ -1,0 +1,6 @@
+To find the IP_address of a device type the following command:
+	$ ip add
+	
+A lot of writing can be found. Find a number fomatted similar to this:
+	192.168.x.xxx
+This will be your ip address. The last 3 digit of you IP address can occassionally change. Don't worry about this. It is normal.

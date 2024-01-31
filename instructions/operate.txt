@@ -1,0 +1,13 @@
+First: 
+	Boot your raspberry pi and type in: 
+		$ roscore
+	This will start you ros operation core.
+Then:
+
+	Start Cemera but don't detect object: $ rosrun weed_detection image_publish.py
+	Start Camera and detect objects: $ rosrun weed_detection image_process_publish.py
+
+	Read from camera but don't detect object: $ rosrun weed_detection image_subscribe.py
+	Read from camera and detect object: $ rosrun weed_detection image_process_subscribe.py
+
+	Start gps: $ rosrun weed_detection gps.py

@@ -4,6 +4,7 @@ import rospy
 from sensor_msgs.msg import Image
 from cv_bridge import CvBridge
 import torch
+import os
 
 #from RPi import GPIO #uncomment only for raspberry pi
 #import time #uncomment only for raspberry pi
@@ -16,9 +17,9 @@ def setup_LED():
 def_LED_blink():
     GPIO.output(gpio_pin, GPIO.HIGH)
 '''
-
+model_path = str(os.getcwd() + '/custom3.pt')
 def load_model():
-    model = torch.hub.load('ultralytics/yolov5', 'custom', path="/media/rafi/Technical/Projects/weed_detection/weed_detection_ws/src/weed_detection/src/custom3.pt", force_reload= True)
+    model = torch.hub.load('ultralytics/yolov5', 'custom', path= model_path, force_reload= True)
     return model
 
 model = load_model()
