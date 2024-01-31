@@ -8,7 +8,7 @@ from sensor_msgs.msg import Image
 from cv_bridge import CvBridge
 
 def load_model():
-    model = torch.hub.load('ultralytics/yolov5', 'custom', path='/media/rafi/Technical/Projects/weed_detection/weed_detection_ws/src/weed_detection/src/custom3.pt', force_reload= True)
+    model = torch.hub.load('ultralytics/yolov5', 'custom', path='/home/sharnali/weed_detection/weed_detection_ws/src/weed_detection/src/custom3.pt', force_reload= True)
     return model
 
 model = load_model()
