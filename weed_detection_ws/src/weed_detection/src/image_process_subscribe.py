@@ -17,7 +17,7 @@ def setup_LED():
 def_LED_blink():
     GPIO.output(gpio_pin, GPIO.HIGH)
 '''
-model_path = str(os.getcwd() + '/custom3.pt')
+model_path = str(os.getcwd() + '/weed_detection/weed_detection_ws/src/weed_detection/src/custom3.pt')
 def load_model():
     model = torch.hub.load('ultralytics/yolov5', 'custom', path= model_path, force_reload= True)
     return model
