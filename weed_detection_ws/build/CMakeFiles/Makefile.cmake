@@ -13,7 +13,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "catkin/catkin_generated/version/package.cmake"
   "catkin_generated/installspace/_setup_util.py"
   "catkin_generated/order_packages.cmake"
-  "/media/rafi/Technical/Projects/weed_detection/weed_detection_ws/src/CMakeLists.txt"
+  "/home/sharnali/weed_detection/weed_detection_ws/src/CMakeLists.txt"
   "/opt/ros/noetic/share/catkin/cmake/all.cmake"
   "/opt/ros/noetic/share/catkin/cmake/assert.cmake"
   "/opt/ros/noetic/share/catkin/cmake/atomic_configure_file.cmake"

@@ -2,7 +2,7 @@
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/media/rafi/Technical/Projects/weed_detection/weed_detection_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/sharnali/weed_detection/weed_detection_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

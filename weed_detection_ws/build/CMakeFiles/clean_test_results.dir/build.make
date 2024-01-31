@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /media/rafi/Technical/Projects/weed_detection/weed_detection_ws/src
+CMAKE_SOURCE_DIR = /home/sharnali/weed_detection/weed_detection_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /media/rafi/Technical/Projects/weed_detection/weed_detection_ws/build
+CMAKE_BINARY_DIR = /home/sharnali/weed_detection/weed_detection_ws/build
 
 # Utility rule file for clean_test_results.
 
@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /media/rafi/Technical/Projects/weed_detection/weed_detection_
 include CMakeFiles/clean_test_results.dir/progress.make
 
 CMakeFiles/clean_test_results:
-	/usr/bin/python3 /opt/ros/noetic/share/catkin/cmake/test/remove_test_results.py /media/rafi/Technical/Projects/weed_detection/weed_detection_ws/build/test_results
+	/usr/bin/python3 /opt/ros/noetic/share/catkin/cmake/test/remove_test_results.py /home/sharnali/weed_detection/weed_detection_ws/build/test_results
 
 clean_test_results: CMakeFiles/clean_test_results
 clean_test_results: CMakeFiles/clean_test_results.dir/build.make
@@ -71,6 +71,6 @@ CMakeFiles/clean_test_results.dir/clean:
 .PHONY : CMakeFiles/clean_test_results.dir/clean
 
 CMakeFiles/clean_test_results.dir/depend:
-	cd /media/rafi/Technical/Projects/weed_detection/weed_detection_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /media/rafi/Technical/Projects/weed_detection/weed_detection_ws/src /media/rafi/Technical/Projects/weed_detection/weed_detection_ws/src /media/rafi/Technical/Projects/weed_detection/weed_detection_ws/build /media/rafi/Technical/Projects/weed_detection/weed_detection_ws/build /media/rafi/Technical/Projects/weed_detection/weed_detection_ws/build/CMakeFiles/clean_test_results.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/sharnali/weed_detection/weed_detection_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/sharnali/weed_detection/weed_detection_ws/src /home/sharnali/weed_detection/weed_detection_ws/src /home/sharnali/weed_detection/weed_detection_ws/build /home/sharnali/weed_detection/weed_detection_ws/build /home/sharnali/weed_detection/weed_detection_ws/build/CMakeFiles/clean_test_results.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/clean_test_results.dir/depend
 
