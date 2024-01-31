@@ -1,2 +1,4 @@
 To update the firmwire type the following command:
 	$ git pull
+
+Kindly let me know if you have to change anything of the program. Don't change anything by yourself when I am away. I won't be able to fix it from far if you change anything. Security protocol will block my access.

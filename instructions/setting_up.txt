@@ -5,7 +5,7 @@
 			$ vim ~/.bashrc
 		This will open the bashrc file. Go to the bottom of the file. Find the following lines:
 			
-			export ROS_MASTER_URI=http://192.168.0.106:11311  [This is the ros master IP address i.e. IP address of your raspberry pi. FInd your raspberry pi's IP address and change it]
+			export ROS_MASTER_URI=http://192.168.0.106:11311  [This is the ros master IP address i.e. IP address of your raspberry pi. FInd your raspberry pi's IP address(Ref: IP_address.txt) and change it]
 			export ROS_IP=192.168.0.106 [This is the IP address of the client device]
 			
 		- save the file

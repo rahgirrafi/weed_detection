@@ -8,7 +8,7 @@ from sensor_msgs.msg import Image
 from cv_bridge import CvBridge
 import os 
 
-model_path = str(os.getcwd() + '/weed_detection/weed_detection_ws/src/weed_detection/src/custom3.pt')
+model_path = '/home/sharnali' + '/weed_detection/weed_detection_ws/src/weed_detection/src/custom3.pt'
 
 
 def load_model():
