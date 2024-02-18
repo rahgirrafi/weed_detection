@@ -7,12 +7,17 @@ from cv_bridge import CvBridge
 from std_msgs.msg import String
 
 gps =  ''
+latitude = 0
+longitude = 0
+text = ''
 def callback(data):
-    global gps
-    gps = data.data   
+    global gps , latitude, longitude, text
+    gps = data.data
+    latitude = gps.split(',')[1]
+    longitude = gps.split(',')[2]
+    text = 'Latitude: ' + latitude + ' Longitude: ' + longitude
 
 def object_detector():
-
 
     bridge = CvBridge()
     cap = cv.VideoCapture(-1)
@@ -28,7 +33,7 @@ def object_detector():
 
         if ret:
             #put gps data on image
-            ros_img = cv.putText(frame, gps, (0,25), cv.FONT_HERSHEY_COMPLEX, 0.5 , (0,255,255), 1, cv.LINE_AA)
+            ros_img = cv.putText(frame, text, (0,25), cv.FONT_HERSHEY_COMPLEX, 0.5 , (0,255,255), 1, cv.LINE_AA)
             ros_img = bridge.cv2_to_imgmsg(frame, encoding="passthrough")
             # Publish the image
             

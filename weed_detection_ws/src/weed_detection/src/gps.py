@@ -22,7 +22,8 @@ def start_gps():
             msg = pynmea2.parse(newdata)
             lat = msg.latitude
             lng = msg.longitude
-            gps = "Latitude = " + str(lat) + " Longitude = " + str(lng)
+            time = msg.timestamp
+            gps = str(time) + str(lat) + ',' + str(lng)
             #print(msg)
             pub.publish(gps)
             print(gps)

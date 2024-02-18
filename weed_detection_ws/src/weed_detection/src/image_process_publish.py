@@ -6,13 +6,12 @@ import rospy
 import torch
 from sensor_msgs.msg import Image
 from cv_bridge import CvBridge
-import os 
+import os
 
-model_path = '/home/sharnali' + '/weed_detection/weed_detection_ws/src/weed_detection/src/custom3.pt'
-
+model_path = os.getcwd() + '/weed_detection/weed_detection_ws/src/weed_detection/src/custom3.pt'
 
 def load_model():
-    model = torch.hub.load('ultralytics/yolov5', 'custom', path=model_path force_reload= True)
+    model = torch.hub.load('ultralytics/yolov5', 'custom', path='/home/sharnali/weed_detection/weed_detection_ws/src/weed_detection/src/custom3.pt', force_reload= True)
     return model
 
 model = load_model()
